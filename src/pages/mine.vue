@@ -1,0 +1,109 @@
+<template>
+    <f7-page>
+        <f7-navbar title="个人中心" back-link="" sliding></f7-navbar>
+        <f7-block style="padding:0;margin:0">
+            <div class="min-height-flex" style="min-height:calc(100vh - 95px)">
+                <a class="f7-mine-header">
+                    <div class="f7-mine-headPortrait">
+                        <img src="../../img/head.png" alt="">
+                    </div>
+                    <div class="f7-mine-headRight">
+                        <div class="f7-mine-headRight-top">陈子福</div>
+                        <div class="f7-mine-headRight-bottom">藏C77777</div>
+                    </div>
+                </a>
+
+                <a class="f7-enjoy-list" style="clear:both;">
+                    <div class="f7-enjoy-list-img">
+                        <img src="../../img/location.png">
+                    </div>
+                    <div class="f7-enjoy-list-title">
+                        车辆信息
+                    </div>
+                    <a href="//"class="f7-enjoy-list-right">＞</a>
+                </a>
+                <a href="/driver/" class="f7-enjoy-list" style="clear:both;">
+                    <div class="f7-enjoy-list-img">
+                        <img src="../../img/location.png">
+                    </div>
+                    <div class="f7-enjoy-list-title">
+                        司机信息
+                    </div>
+                    <a href="/driver/"class="f7-enjoy-list-right">＞</a>
+                </a>
+                <a class="f7-enjoy-list" style="clear:both;">
+                    <div class="f7-enjoy-list-img">
+                        <img src="../../img/location.png">
+                    </div>
+                    <div class="f7-enjoy-list-title">
+                        常跑信息
+                    </div>
+                    <a class="f7-enjoy-list-right">＞</a>
+                </a>
+                <a class="f7-enjoy-list" style="clear:both;margin-top:10px">
+                    <div class="f7-enjoy-list-img">
+                        <img src="../../img/location.png">
+                    </div>
+                    <div class="f7-enjoy-list-title">
+                        设置
+                    </div>
+                    <a class="f7-enjoy-list-right">＞</a>
+                </a>
+            </div>
+            <!--固定底部导航栏-->
+            <div v-if="" class="sh-footer">
+                <!--<a style="display: none" id="goabout" href="/about/"></a>-->
+                <a href="/index/"><div class="sh-footer-bgcomm sh-footer-bgcomm-index":class="classA"><span>干活</span></div></a>
+                <a href="/enjoy/"><div class="sh-footer-bgcomm sh-footer-bgcomm-design":class="classB" ><span>享受</span></div></a>
+                <a href="/vault/"><div class="sh-footer-bgcomm sh-footer-bgcomm-shop":class="classC"><span>金库</span></div></a>
+                <a href="/mine/"><div class="sh-footer-bgcomm sh-footer-bgcomm-user":class="classD"><span>我</span></div></a>
+            </div>
+        </f7-block>
+    </f7-page>
+</template>
+
+<script>
+	export default {}
+</script>
+
+<style>
+    .f7-mine-header{
+        background-color:rgb(35, 151, 254);
+        height:100px;
+        padding-left:6%;
+        padding-right:6%;
+        margin-bottom:10px;
+        display: block;
+    }
+    .f7-mine-headPortrait{
+        width:30%;
+        float:left;
+    }
+    .f7-mine-headPortrait img{
+        width:80px;
+        margin-top:10px;
+    }
+    .f7-mine-headRight{
+        width:60%;
+        float:left;
+        padding-left:10%;
+    }
+    .f7-mine-headRight-top{
+        font-size:22px;
+        color:#fff;
+        height:40px;
+        line-height:67px;
+    }
+    .f7-mine-headRight-bottom{
+        font-size:18px;
+        color:#fff;
+        height:40px;
+        line-height:50px;
+    }
+    .f7-enjoy-list{
+        margin-bottom:1px;
+        display:block;
+        color:#000;
+        text-decoration: none;
+    }
+</style>
