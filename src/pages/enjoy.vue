@@ -2,7 +2,7 @@
     <f7-page>
         <f7-navbar title="享受" back-link="" sliding></f7-navbar>
         <f7-block style="padding:0;margin:0;">
-            <div class="min-height-flex">
+            <div class="min-height-flex" @click="openPhone">
                 <div class="f7-enjoy-list">
                     <div class="f7-enjoy-list-img">
                         <img src="../../img/location.png">
@@ -10,19 +10,9 @@
                     <div class="f7-enjoy-list-title">
                         拨打客服电话
                     </div>
-                    <div class="f7-enjoy-list-right">＞</div>
+                    <a href="javascript:;"class="f7-enjoy-list-right" >＞</a>
                 </div>
             </div>
-
-            <div class="popup">
-                hello
-            </div>
-
-            <!-- Popup which is also fullscreen on tablets -->
-            <div class="popup tablet-fullscreen">
-                world
-            </div>
-
 
             <!--固定底部导航栏-->
             <div v-if="" class="sh-footer">
@@ -37,7 +27,24 @@
 </template>
 
 <script>
-	export default {}
+	export default {
+		data() {
+			return {
+				classA: '',
+				classB: '',
+				classC: '',
+				classD: '',
+			};
+		},
+		methods: {
+			openPhone(){
+				let app = new Framework7();
+				app.confirm('123465798','拨打客服电话', function () {
+					window.location.href = "tel:123465798";
+				})
+            }
+        }
+    }
 </script>
 
 <style>

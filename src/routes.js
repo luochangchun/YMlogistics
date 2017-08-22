@@ -4,12 +4,56 @@ export default [
       component: require('./pages/about.vue')
   },
 	{
+		path: '/register/',
+		component: require('./pages/register.vue')
+	},
+	{
+		path: '/often/',
+		component: require('./pages/often.vue')
+	},
+	{
+		path: '/setting/',
+		component: require('./pages/setting.vue')
+	},
+	{
+		path: '/pwd/',
+		component: require('./pages/pwd.vue')
+	},
+	{
+		path: '/vehicleInformation/',
+		component: require('./pages/vehicleInformation.vue')
+	},
+	{
+		path: '/audit/',
+		component: require('./pages/audit.vue')
+	},
+	{
+		path: '/carNum/',
+		component: require('./pages/carNum.vue')
+	},
+	{
+		path: '/photograph/',
+		component: require('./pages/photograph.vue')
+	},
+	{
+		path: '/carInformation/',
+		component: require('./pages/carInformation.vue')
+	},
+	{
 		path: '/add/',
 		component: require('./pages/add.vue')
 	},
 	{
+		path: '/login/',
+		component: require('./pages/login.vue')
+	},
+	{
 		path: '/driver/',
 		component: require('./pages/driver.vue')
+	},
+	{
+		path: '/competing/',
+		component: require('./pages/competing.vue')
 	},
 	{
 		path: '/work/',

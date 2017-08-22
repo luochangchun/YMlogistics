@@ -66,7 +66,7 @@
                         <p class="f7-work-haulway">运输线路</p>
                         <div class="f7-work-haulway-box">
                             <div class="f7-work-haulway-left">广东广州 <span>→</span> 云南昆明</div>
-                            <div class="f7-work-haulway-left">参考里程：1388公里</div>
+                            <div class="f7-work-haulway-left"style="line-height: 23px;">参考里程：1388公里</div>
                         </div>
                     </div>
 
@@ -183,7 +183,7 @@
         width:100%;
     }
     .f7-bankRecord-list-topLeft span{
-        margin-right:10%;
+        margin-right:6%;
         font-size:8px;
         color:#fff;
         width:18px;
@@ -195,7 +195,7 @@
         display:inline-block;
     }
     .f7-bankRecord-list-topRight span{
-        margin-right:8%;
+        margin-right:6%;
         font-size:8px;
         color:#fff;
         width:18px;

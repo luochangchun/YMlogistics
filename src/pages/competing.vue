@@ -1,7 +1,7 @@
 <template>
     <f7-page>
-        <f7-navbar title="设置" back-link="Back" sliding></f7-navbar>
-        <f7-block style="margin:0;padding:0">
+        <f7-navbar title="抢单报价" back-link="Back" sliding></f7-navbar>
+        <f7-block inner>
             <p>Here is About page!</p>
 
         </f7-block>

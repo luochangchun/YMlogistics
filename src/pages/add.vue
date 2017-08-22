@@ -3,18 +3,17 @@
         <f7-navbar title="银行" back-link="Back" sliding></f7-navbar>
         <f7-block  style="padding:0">
             <div class="f7-add">
-                <p class="f7-add-title">请绑定持卡人本人的银行卡</p>
-                <div class="f7-add-list">
-                    <span>卡类型</span> <input>
+                <div class="f7-add-list header">
+                    <span>开户银行</span><input style="width:73%" placeholder="中国工商银行"><a>＞</a>
                 </div>
                 <div class="f7-add-list">
-                    <span>持卡人</span> <input>
+                    <span>用户名</span> <input placeholder="开户人姓名">
                 </div>
                 <div class="f7-add-list">
-                    <span>账号</span> <input>
+                    <span>账号</span> <input  placeholder="银行卡号 / 储蓄账号">
                 </div>
                 <div class="f7-add-list">
-                    <span>开户省市</span> <input>
+                    <span>开户省市</span> <input placeholder="">
                 </div>
                 <div class="f7-add-list">
                     <span>支行</span> <input>
@@ -29,6 +28,15 @@
 	export default {}
 </script>
 <style>
+    .header>::-webkit-input-placeholder{
+        text-align:right;
+    }
+    .header a{
+        float:right;
+        width:18px;
+        color:#b9b9b9;
+        font-size:22px;
+    }
     .f7-add{
         margin-top:-34px;
     }

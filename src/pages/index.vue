@@ -9,27 +9,27 @@
           <!-- Pages -->
         <f7-pages>
           <f7-page>
-            <div class="min-height-flex" style="min-height:calc(100vh - 120px)">
-              <div class=f7-work-header>
-                <div class=f7-work-top>
-                  <div class="f7-work-top-left">
-                    <div>庄899<span>&nbsp;&nbsp;&nbsp;鄂A54651</span></div>
-                  </div>
-                  <div class="f7-work-top-right">
-                    <button>历史运单</button>
-                    <div class=f7-work-envelope>
-                      <img src=../../img/envelope.png>
-                      <span class=f7-work-red>7</span>
-                    </div>
-
-                  </div>
+            <div class=f7-work-header>
+              <div class=f7-work-top>
+                <div class="f7-work-top-left">
+                  <div>庄899<span>&nbsp;&nbsp;&nbsp;鄂A54651</span></div>
                 </div>
-                <div class=f7-work-bottom>
-                  <a class="f7-btn1"><button style="background-color: #9cce13">指派</button></a>
-                  <a href="/bidding/"class="f7-btn2"><button>竞价</button></a>
+                <div class="f7-work-top-right">
+                  <button>历史运单</button>
+                  <div class=f7-work-envelope>
+                    <img src=../../img/envelope.png>
+                    <span class=f7-work-red>7</span>
+                  </div>
+
                 </div>
               </div>
+              <div class=f7-work-bottom>
+                <a class="f7-btn1"><button :class="{tabbtn: btnActive}" @click="btnActive=true">指派</button></a>
+                <a class="f7-btn2"><button :class="{tabbtn:!btnActive}" @click="btnActive=false">竞价</button></a>
+              </div>
+            </div>
 
+            <div v-show="btnActive">
               <div class=f7-work-main>
                 <p>运作中订单</p>
                 <div class=f7-work-titlt>
@@ -106,7 +106,7 @@
                         全额回单付
                       </div>
                     </div>
-                    <div class="detil"><a href="/work/">查看详情</a></div>
+                    <div class="detil"><a href="#">查看详情</a></div>
                   </div>
                 </div>
               </div>
@@ -137,12 +137,85 @@
                         全额回单付
                       </div>
                     </div>
-                    <div class="detil"><a href="/sure/">查看详情</a></div>
+                    <div class="detil"><a href="#">查看详情</a></div>
                   </div>
                 </div>
               </div>
             </div>
 
+            <div v-show="!btnActive"style="min-height: calc(100vh - 217px );">
+                <div class="f7-work-quote">
+                    <div :class="{price:priceActive}" @click="priceActive=true">待报价</div>
+                    <div :class="{price:!priceActive}" @click="priceActive=false">已报价</div>
+                </div>
+                <div v-show="priceActive">
+                    <div>
+                        <!--提货地-->
+                    </div>
+                    <p class=f7-work-title style="text-align:left;padding-left:6%">共有<span>4</span>票运单正在找车</p>
+
+                    <div class=f7-work-list>
+                        <div class=f7-work-list-left-img>
+                            <img src=../../img/2.png>
+                        </div>
+                        <div class=f7-work-package-right>
+                            <div class=f7-work-package-right-top>
+                                <p class="f7-work-number">NO 2017080754054</p>
+                                <button class="f7-work-bill">剩余3小时56分</button>
+                            </div>
+                            <div class=f7-work-package-right-bottom style="height:38px;">
+                                <h4>湖北武汉&nbsp;<span style="font-size:18px;font-weight:800">→</span>&nbsp;安徽合肥&nbsp;&nbsp;<span>3吨/3方</span></h4>
+                            </div>
+                            <div class="f7-work-price">
+                                <div class="f7-work-money">
+                                    <img src="../../img/1.png" alt="">
+                                </div>
+                                <div class="f7-work-btm">
+                                    <div class=f7-work-send style="line-height:30px;">
+                                        结算方式：全额回单付
+                                    </div>
+                                </div>
+                                <div class="detil"style="line-height:9px;"><a href="/competing/">抢单报价</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div v-show="!priceActive">
+                    <div>
+                        <!--提货地-->
+                    </div>
+                    <div class=f7-work-list>
+                <div class=f7-work-list-left-img>
+                   <img src=../../img/2.png>
+                </div>
+                <div class=f7-work-package-right>
+                  <div class=f7-work-package-right-top>
+                    <p class="f7-work-number">NO 2017080754054</p>
+                    <button class="f7-work-bill">剩余3小时56分</button>
+                  </div>
+                  <div class=f7-work-package-right-bottom>
+                    <h4>湖北武汉&nbsp;<span style="font-size:18px;font-weight:800">→</span>&nbsp;安徽合肥&nbsp;&nbsp;<span>3吨/3方</span></h4>
+                    <p>提货时间：<span>2017-8-2  &nbsp;17:00</span></p>
+                  </div>
+                  <div class="f7-work-price">
+                    <div class="f7-work-money">
+                      <img src="../../img/1.png" alt="">
+                    </div>
+                    <div class="f7-work-btm">
+                      <div class=f7-work-send>
+                        一口价 <span>1000.0</span>元
+                      </div>
+                      <div class=f7-work-last-position>
+                        全额回单付
+                      </div>
+                    </div>
+                    <div class="detil"><a href="#">查看详情</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
             <!--固定底部导航栏-->
              <div v-if="" class="sh-footer">
                 <!--<a style="display: none" id="goabout" href="/about/"></a>-->
@@ -171,13 +244,15 @@
 					classB:False,
 					classC:False,
 					classD:False,
-					mainView:null
+					mainView:null,
+					btnActive: true, //顶部按钮切换变量
+                    priceActive: true
 	            };
 	        },
 	        mounted(){
 
 	        },
-	        methods:{
+			methods:{
 				_goToRouter(num){
 					let overClass=YMWLNAME_list[num];
 					[this.classA,this.classB,this.classC,this.classD]=[false,false,false,false];
@@ -207,12 +282,17 @@
   /*.classA{*/
     /*background-image:url(../../img/car_1.png);*/
   /*}*/
-
+  .price{
+      border-bottom:3px solid #9cce13;
+  }
   .f7-work-header{
     padding-top:4%;
     background-color:#04538e;
     padding-left:6%;
     padding-right:6%;
+  }
+  .f7-work-bottom .f7-btn1>.tabbtn,.f7-work-bottom .f7-btn2>.tabbtn{
+    background-color: #9cce13;
   }
     .f7-work-top{
         height:30px;
@@ -533,5 +613,17 @@
     height: 20px;
     line-height: 20px;
     color:#b3b3b3;
+  }
+  .f7-work-quote{
+      background-color:#fff;
+      height:40px;
+  }
+  .f7-work-quote div{
+      float:left;
+      width:50%;
+      text-align: center;
+      height:37px;
+      line-height:37px;
+      font-size:14px;
   }
 </style>

@@ -17,7 +17,9 @@
                         <h3 style="color:#b3b3b3;font-size:18px;height:30px;">***************4556</h3>
                     </div>
                 </div>
-                <i class="check_round_fill"style="width:20px;height:20px;color:#6faedf"></i>
+                <i class="check_round_fill">
+                    <img src="../../img/rights.png" alt="">
+                </i>
             </div>
             <div class=f7-work-list style="height:120px;margin-bottom:2%">
                 <div class=f7-work-list-left-img>
@@ -31,7 +33,9 @@
                         <h3 style="color:#b3b3b3;font-size:18px;height:30px;">***************4556</h3>
                     </div>
                 </div>
-                <i class="check_round_fill"style="width:20px;height:20px;color:#6faedf"></i>
+                <i class="check_round_fill">
+                    <img src="../../img/rights.png" alt="">
+                </i>
             </div>
 
 
@@ -46,4 +50,9 @@
         font-size:32px;
         font-weight:600;
     }
+    .check_round_fill img{
+        width:25px;
+        margin-top:15px;
+    }
+
 </style>

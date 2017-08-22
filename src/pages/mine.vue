@@ -3,7 +3,7 @@
         <f7-navbar title="个人中心" back-link="" sliding></f7-navbar>
         <f7-block style="padding:0;margin:0">
             <div class="min-height-flex" style="min-height:calc(100vh - 95px)">
-                <a class="f7-mine-header">
+                <a href="/login/" class="f7-mine-header">
                     <div class="f7-mine-headPortrait">
                         <img src="../../img/head.png" alt="">
                     </div>
@@ -13,7 +13,7 @@
                     </div>
                 </a>
 
-                <a class="f7-enjoy-list" style="clear:both;">
+                <a href="/vehicleInformation/" class="f7-enjoy-list" style="clear:both;">
                     <div class="f7-enjoy-list-img">
                         <img src="../../img/location.png">
                     </div>
@@ -31,7 +31,7 @@
                     </div>
                     <a href="/driver/"class="f7-enjoy-list-right">＞</a>
                 </a>
-                <a class="f7-enjoy-list" style="clear:both;">
+                <a href="/often/" class="f7-enjoy-list" style="clear:both;">
                     <div class="f7-enjoy-list-img">
                         <img src="../../img/location.png">
                     </div>
@@ -40,7 +40,7 @@
                     </div>
                     <a class="f7-enjoy-list-right">＞</a>
                 </a>
-                <a class="f7-enjoy-list" style="clear:both;margin-top:10px">
+                <a href="/setting/" class="f7-enjoy-list" style="clear:both;margin-top:10px">
                     <div class="f7-enjoy-list-img">
                         <img src="../../img/location.png">
                     </div>
@@ -63,12 +63,21 @@
 </template>
 
 <script>
-	export default {}
+	export default {
+		data() {
+			return {
+				classA: '',
+				classB: '',
+				classC: '',
+				classD: '',
+            };
+        }
+    }
 </script>
 
 <style>
     .f7-mine-header{
-        background-color:rgb(35, 151, 254);
+        background-color:#04538e;
         height:100px;
         padding-left:6%;
         padding-right:6%;
@@ -89,13 +98,13 @@
         padding-left:10%;
     }
     .f7-mine-headRight-top{
-        font-size:22px;
+        font-size:20px;
         color:#fff;
         height:40px;
         line-height:67px;
     }
     .f7-mine-headRight-bottom{
-        font-size:18px;
+        font-size:16px;
         color:#fff;
         height:40px;
         line-height:50px;

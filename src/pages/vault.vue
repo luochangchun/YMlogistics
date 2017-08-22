@@ -43,7 +43,16 @@
 </template>
 
 <script>
-	export default {}
+	export default {
+		data() {
+			return {
+				classA: '',
+				classB: '',
+				classC: '',
+				classD: '',
+			};
+		}
+	}
 </script>
 
 <style>
