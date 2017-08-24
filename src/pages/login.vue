@@ -2,18 +2,18 @@
     <f7-page>
         <f7-navbar title="账号登录" back-link="Back" sliding></f7-navbar>
         <f7-block style="margin:0;padding:0">
-            <div class="f7-login-list" v-show="isboxone">
-                <ul>
-                    <li @click="getFont(item)" v-for="item in car1Num" v-text="item"></li>
-                </ul>
-            </div>
-            <div class="f7-login-list" v-show="isBoxtwo">
-                <ul>
-                    <li @click="addNum(item)" v-for="item in NUM1Num" v-text="item"></li>
-                </ul>
-            </div>
+            <!--<div class="f7-login-list" v-show="isboxone">-->
+                <!--<ul>-->
+                    <!--<li @click="getFont(item)" v-for="item in car1Num" v-text="item"></li>-->
+                <!--</ul>-->
+            <!--</div>-->
+            <!--<div class="f7-login-list" v-show="isBoxtwo">-->
+                <!--<ul>-->
+                    <!--<li @click="addNum(item)" v-for="item in NUM1Num" v-text="item"></li>-->
+                <!--</ul>-->
+            <!--</div>-->
             <div class="f7-login-input">
-                <div class="textcarnum"><span v-text="carname"></span><i @click="showshow" style="float:right;display:block;">delete</i></div>
+                <input placeholder="填写手机号">
                 <input type="text" v-model="pwd"placeholder="密码">
                 <button class="btn">登录</button>
             </div>
@@ -21,7 +21,13 @@
                 <a href="/register/" style="float:left">注册新用户</a>
                 <a href="#" style="float:right">忘记密码?</a>
             </div>
-
+            <div class="" @click="openPhone">
+                <div class="f7-enjoy-list" style="bottom:0;position:fixed;width:100%;height:40px;left: 0;">
+                    <div class="f7-enjoy-list-title" style="text-align:center;width:100%;margin-left:-6%;font-size:18px;color:#007aff">
+                        拨打客服电话
+                    </div>
+                </div>
+            </div>
         </f7-block>
     </f7-page>
 </template>
@@ -40,6 +46,12 @@
             };
         },
 		methods: {
+			openPhone() {
+				let app = new Framework7();
+				app.confirm('123465798', '拨打客服电话', function () {
+					window.location.href = "tel:123465798";
+				})
+            },
 			getFont(item){
 				this.carname = item;
 				if(item.length <= 0){
@@ -88,7 +100,7 @@
         width:88%;
         height:40px;
         border:none;
-        background-color:#9cce13;
+        background-color:#9CCE13;
         color:#fff;
         font-size:16px;
         margin-top:10px;

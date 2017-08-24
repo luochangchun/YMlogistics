@@ -32,10 +32,10 @@
                 <!--固定底部导航栏-->
                 <div v-if="" class="sh-footer">
                     <!--<a style="display: none" id="goabout" href="/about/"></a>-->
-                    <a href="/index/"><div class="sh-footer-bgcomm sh-footer-bgcomm-index":class="classA"><span>干活</span></div></a>
-                    <a href="/enjoy/"><div class="sh-footer-bgcomm sh-footer-bgcomm-design":class="classB" ><span>享受</span></div></a>
-                    <a href="/vault/"><div class="sh-footer-bgcomm sh-footer-bgcomm-shop":class="classC"><span>金库</span></div></a>
-                    <a href="/mine/"><div class="sh-footer-bgcomm sh-footer-bgcomm-user":class="classD"><span>我</span></div></a>
+                    <a href="/index/"><div class="sh-footer-bgcomm sh-footer-bgcomm-index"><span>干活</span></div></a>
+                    <a href="/enjoy/"><div class="sh-footer-bgcomm sh-footer-bgcomm-design"><span>享受</span></div></a>
+                    <a href="javascript:;"><div class="sh-footer-bgcomm sh-footer-bgcomm-shop f7-vault"><span>金库</span></div></a>
+                    <a href="/mine/"><div class="sh-footer-bgcomm sh-footer-bgcomm-user"><span>我</span></div></a>
                 </div>
 
         </f7-block>
@@ -46,16 +46,19 @@
 	export default {
 		data() {
 			return {
-				classA: '',
-				classB: '',
-				classC: '',
-				classD: '',
+
 			};
 		}
 	}
 </script>
 
 <style>
+    .f7-vault{
+        background-image: url(../../img/vault.png);
+    }
+    .f7-vault>span{
+        color:rgb(4, 83, 142);
+    }
     .f7-vault-header-box-top{
         margin-top:0;
     }
@@ -108,7 +111,7 @@
 
     .f7-vault-title{
         clear:both;
-        background-color:#b1df6f;
+        background-color:#9CCE13;
         width:100%;
         height:35px;
         text-align: center;

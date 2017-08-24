@@ -1,4 +1,8 @@
 export default [
+	{
+		path: '/index/',
+		component: require('./app.vue')
+	},
   {
       path: '/about/',
       component: require('./pages/about.vue')
@@ -10,6 +14,10 @@ export default [
 	{
 		path: '/often/',
 		component: require('./pages/often.vue')
+	},
+	{
+		path: '/addPhoto/',
+		component: require('./pages/addPhoto.vue')
 	},
 	{
 		path: '/setting/',
@@ -28,9 +36,26 @@ export default [
 		component: require('./pages/audit.vue')
 	},
 	{
+		path: '/offer/',
+		component: require('./pages/offer.vue')
+	},
+	{
+		path: '/city/',
+		component: require('./pages/city.vue')
+	},
+	{
+		path: '/oftenAdd/',
+		component: require('./pages/oftenAdd.vue')
+	},
+	{
 		path: '/carNum/',
 		component: require('./pages/carNum.vue')
 	},
+	{
+		path: '/receipt/',
+		component: require('./pages/receipt.vue')
+	},
+
 	{
 		path: '/photograph/',
 		component: require('./pages/photograph.vue')
@@ -80,8 +105,8 @@ export default [
 		component: require('./pages/app1.vue')
 	},
 	{
-		path: '/bidding/',
-		component: require('./pages/bidding.vue')
+		path: '/abnormal/',
+		component: require('./pages/abnormal.vue')
 	},
 	{
 		path: '/bankAccount/',
@@ -98,10 +123,6 @@ export default [
   {
   	  path: '/mine/',
   	  component: require('./pages/mine.vue')
-  },
-  {
-      path: '/test123/',
-      component: require('./pages/test123.vue')
   },
   {
       path: '/form/',

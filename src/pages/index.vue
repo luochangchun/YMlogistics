@@ -20,7 +20,6 @@
                     <img src=../../img/envelope.png>
                     <span class=f7-work-red>7</span>
                   </div>
-
                 </div>
               </div>
               <div class=f7-work-bottom>
@@ -57,7 +56,7 @@
                 <div class=f7-work-package-right>
                   <div class=f7-work-package-right-top>
                     <p class="f7-work-number">NO 2017080754054</p>
-                    <button class="f7-work-bill">回单上传</button>
+                    <a href="/receipt/"><button class="f7-work-bill">回单上传</button></a>
                   </div>
                   <div class=f7-work-package-right-bottom>
                     <h4>湖北武汉&nbsp;<span style="font-size:18px;font-weight:800">→</span>&nbsp;安徽合肥&nbsp;&nbsp;<span>3吨/3方</span></h4>
@@ -88,7 +87,7 @@
                 <div class=f7-work-package-right>
                   <div class=f7-work-package-right-top>
                     <p class="f7-work-number">NO 2017080754054</p>
-                    <button class="f7-work-bill">回单上传</button>
+                    <a href="/receipt/"><button class="f7-work-bill">回单上传</button></a>
                   </div>
                   <div class=f7-work-package-right-bottom>
                     <h4>湖北武汉&nbsp;<span style="font-size:18px;font-weight:800">→</span>&nbsp;安徽合肥&nbsp;&nbsp;<span>3吨/3方</span></h4>
@@ -106,7 +105,7 @@
                         全额回单付
                       </div>
                     </div>
-                    <div class="detil"><a href="#">查看详情</a></div>
+                    <div class="detil"><a href="/work/">查看详情</a></div>
                   </div>
                 </div>
               </div>
@@ -137,7 +136,7 @@
                         全额回单付
                       </div>
                     </div>
-                    <div class="detil"><a href="#">查看详情</a></div>
+                    <div class="detil"><a href="/sure/">查看详情</a></div>
                   </div>
                 </div>
               </div>
@@ -149,83 +148,139 @@
                     <div :class="{price:!priceActive}" @click="priceActive=false">已报价</div>
                 </div>
                 <div v-show="priceActive">
-                    <div>
-                        <!--提货地-->
-                    </div>
-                    <p class=f7-work-title style="text-align:left;padding-left:6%">共有<span>4</span>票运单正在找车</p>
-
-                    <div class=f7-work-list>
-                        <div class=f7-work-list-left-img>
-                            <img src=../../img/2.png>
+                    <div class="f7-index-price">
+                        <div class="f7-price-carry" id="DBTH">
+                            <div>卸货地</div>
                         </div>
-                        <div class=f7-work-package-right>
-                            <div class=f7-work-package-right-top>
-                                <p class="f7-work-number">NO 2017080754054</p>
-                                <button class="f7-work-bill">剩余3小时56分</button>
+                        <div class="f7-price-right">→</div>
+                        <div class="f7-price-carry">
+                            <div>卸货地</div>
+                        </div>
+                        <div class="f7-price-carry">
+                            <div>提货时间</div>
+                        </div>
+                        <div class="f7-price-more">
+                            <button @click="showMoreActive">更多</button>
+                        </div>
+                    </div>
+                    <div v-show="moreActive">
+                        <div class="f7-price-weight">
+                            <p>重量（吨）:</p>
+                            <input type="text"placeholder="最低值">
+                            <span>到</span>
+                            <input type="text"placeholder="最高值" >
+                        </div>
+                        <div class="f7-price-weight">
+                            <p>体积（方）:</p>
+                            <input type="text"placeholder="最低值">
+                            <span>到</span>
+                            <input type="text"placeholder="最高值" >
+                        </div>
+                        <button class="btn">完成</button>
+                    </div>
+                    <div v-show="!moreActive">
+                        <p class=f7-work-title style="text-align:left;padding-left:6%">共有<span>4</span>票运单正在找车</p>
+
+                        <div class=f7-work-list>
+                            <div class=f7-work-list-left-img>
+                                <img src=../../img/2.png>
                             </div>
-                            <div class=f7-work-package-right-bottom style="height:38px;">
-                                <h4>湖北武汉&nbsp;<span style="font-size:18px;font-weight:800">→</span>&nbsp;安徽合肥&nbsp;&nbsp;<span>3吨/3方</span></h4>
-                            </div>
-                            <div class="f7-work-price">
-                                <div class="f7-work-money">
-                                    <img src="../../img/1.png" alt="">
+                            <div class=f7-work-package-right>
+                                <div class=f7-work-package-right-top>
+                                    <p class="f7-work-number">NO 2017080754054</p>
+                                    <button class="f7-work-bill">剩余3小时56分</button>
                                 </div>
-                                <div class="f7-work-btm">
-                                    <div class=f7-work-send style="line-height:30px;">
-                                        结算方式：全额回单付
+                                <div class=f7-work-package-right-bottom style="height:38px;">
+                                    <h4>湖北武汉&nbsp;<span style="font-size:18px;font-weight:800">→</span>&nbsp;安徽合肥&nbsp;&nbsp;<span>3吨/3方</span></h4>
+                                </div>
+                                <div class="f7-work-price">
+                                    <div class="f7-work-money">
+                                        <img src="../../img/1.png" alt="">
                                     </div>
+                                    <div class="f7-work-btm">
+                                        <div class=f7-work-send style="line-height:30px;">
+                                            结算方式：全额回单付
+                                        </div>
+                                    </div>
+                                    <div class="detil"style="line-height:9px;"><a href="/competing/">抢单报价</a></div>
                                 </div>
-                                <div class="detil"style="line-height:9px;"><a href="/competing/">抢单报价</a></div>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div v-show="!priceActive">
-                    <div>
-                        <!--提货地-->
+                     <div class="f7-index-price" style="margin-bottom:10px;">
+                         <div class="f7-price-carry">
+                             <div>提货地</div>
+                         </div>
+                         <div class="f7-price-right">→</div>
+                         <div class="f7-price-carry">
+                             <div>卸货地</div>
+                         </div>
+                         <div class="f7-price-carry">
+                             <div>提货时间</div>
+                         </div>
+                         <div class="f7-price-more">
+                             <button @click="showAmoreActive">更多</button>
+                         </div>
+                     </div>
+                     <div v-show="AmoreActive">
+                         <div class="f7-price-weight">
+                             <p>重量（吨）:</p>
+                             <input type="text"placeholder="最低值">
+                             <span>到</span>
+                             <input type="text"placeholder="最高值" >
+                         </div>
+                         <div class="f7-price-weight">
+                             <p>体积（方）:</p>
+                             <input type="text"placeholder="最低值">
+                             <span>到</span>
+                             <input type="text"placeholder="最高值" >
+                         </div>
+                         <button class="btn">完成</button>
                     </div>
+                    <div v-show="!AmoreActive">
                     <div class=f7-work-list>
-                <div class=f7-work-list-left-img>
-                   <img src=../../img/2.png>
-                </div>
-                <div class=f7-work-package-right>
-                  <div class=f7-work-package-right-top>
-                    <p class="f7-work-number">NO 2017080754054</p>
-                    <button class="f7-work-bill">剩余3小时56分</button>
-                  </div>
-                  <div class=f7-work-package-right-bottom>
-                    <h4>湖北武汉&nbsp;<span style="font-size:18px;font-weight:800">→</span>&nbsp;安徽合肥&nbsp;&nbsp;<span>3吨/3方</span></h4>
-                    <p>提货时间：<span>2017-8-2  &nbsp;17:00</span></p>
-                  </div>
-                  <div class="f7-work-price">
-                    <div class="f7-work-money">
-                      <img src="../../img/1.png" alt="">
-                    </div>
-                    <div class="f7-work-btm">
-                      <div class=f7-work-send>
-                        一口价 <span>1000.0</span>元
+                        <div class=f7-work-list-left-img>
+                           <img src=../../img/2.png>
+                        </div>
+                        <div class=f7-work-package-right>
+                          <div class=f7-work-package-right-top>
+                            <p class="f7-work-number">NO 2017080754054</p>
+                            <button class="f7-work-bill">剩余3小时56分</button>
+                          </div>
+                          <div class=f7-work-package-right-bottom>
+                            <h4>湖北武汉&nbsp;<span style="font-size:18px;font-weight:800">→</span>&nbsp;安徽合肥&nbsp;&nbsp;<span>3吨/3方</span></h4>
+                            <p>提货时间：<span>2017-8-2  &nbsp;17:00</span></p>
+                          </div>
+                          <div class="f7-work-price">
+                            <div class="f7-work-money">
+                              <img src="../../img/1.png" alt="">
+                            </div>
+                            <div class="f7-work-btm">
+                              <div class=f7-work-send>
+                                一口价 <span>1000.0</span>元
+                              </div>
+                              <div class=f7-work-last-position>
+                                全额回单付
+                              </div>
+                            </div>
+                            <div class="detil"><a href="/offer/">查看详情</a></div>
+                          </div>
+                        </div>
                       </div>
-                      <div class=f7-work-last-position>
-                        全额回单付
-                      </div>
                     </div>
-                    <div class="detil"><a href="#">查看详情</a></div>
-                  </div>
                 </div>
-              </div>
-            </div>
             </div>
             <!--固定底部导航栏-->
              <div v-if="" class="sh-footer">
                 <!--<a style="display: none" id="goabout" href="/about/"></a>-->
-              <a href="/about/"><div class="sh-footer-bgcomm sh-footer-bgcomm-index":class="classA"><span>干活</span></div></a>
-              <a href="/enjoy/" ><div class="sh-footer-bgcomm sh-footer-bgcomm-design":class="classB" ><span>享受</span></div></a>
-              <a href="/vault/"><div class="sh-footer-bgcomm sh-footer-bgcomm-shop":class="classC"><span>金库</span></div></a>
-              <a href="/mine/"><div class="sh-footer-bgcomm sh-footer-bgcomm-user":class="classD"><span>我</span></div></a>
+              <a href="javascript:;"><div class="sh-footer-bgcomm sh-footer-bgcomm-index f7-index"><span style="color:#04538e">干活</span></div></a>
+              <a href="/enjoy/" ><div class="sh-footer-bgcomm sh-footer-bgcomm-design"><span>享受</span></div></a>
+              <a href="/vault/"><div class="sh-footer-bgcomm sh-footer-bgcomm-shop"><span>金库</span></div></a>
+              <a href="/mine/"><div class="sh-footer-bgcomm sh-footer-bgcomm-user"><span>我</span></div></a>
             </div>
-
-
           </f7-page>
         </f7-pages>
       </f7-view>
@@ -235,43 +290,34 @@
 
 <script type="text/ecmascript-6">
 
-	    const YMWLNAME_list=["f7-work","f7-enjoy","f7-vault","f7-mine"];
-	    const False=false;
 		export default{
 			data(){
 				return{
-					classA:YMWLNAME_list[0],
-					classB:False,
-					classC:False,
-					classD:False,
 					mainView:null,
 					btnActive: true, //顶部按钮切换变量
-                    priceActive: true
+                    priceActive: true,
+					moreActive:false,
+					AmoreActive:false
 	            };
 	        },
 	        mounted(){
 
 	        },
 			methods:{
-				_goToRouter(num){
-					let overClass=YMWLNAME_list[num];
-					[this.classA,this.classB,this.classC,this.classD]=[false,false,false,false];
-					if(num === 0){
-						this.classA=overClass;
-	                }
-					if(num===1){
-
-						this.classB=overClass;
+				showMoreActive() {
+					if(this.moreActive){
+						this.moreActive = false;
+                    }else{
+						this.moreActive = true;
+                    }
+                },
+				showAmoreActive() {
+					if(this.AmoreActive){
+						this.AmoreActive = false;
+					}else{
+						this.AmoreActive = true;
 					}
-					if(num===2){
-
-						this.classC=overClass;
-					}
-					if(num===3){
-
-						this.classD=overClass;
-					}
-	            }
+				}
 	        }
 	    };
 
@@ -279,12 +325,92 @@
 
 
 <style>
-  /*.classA{*/
+    .f7-price-weight{
+        padding-left:6%;
+        padding-right:2%;
+        background-color:#fff;
+        padding-top:1px;
+        margin-top:10px;
+        padding-bottom:10px;
+    }
+    .f7-price-weight p{
+        font-size:14px;
+        height:15px;
+        font-weight:600;
+    }
+    .f7-price-weight input{
+        height:30px;
+        width:30%;
+        /*margin-top:5px;*/
+        border-radius: 3px;
+        border:1px solid #b9b9b9;
+    }
+    .f7-price-weight span{
+        width:10%;
+        text-align: center;
+        display: inline-block;
+        font-size:14px;
+    }
+
+
+    .f7-index-price{
+        padding-left:0;
+        padding-right:2%;
+        margin-top:10px;
+        height:40px;
+        line-height:40px;
+        background-color:#fff;
+    }
+    .f7-index-price div{
+        float:left;
+    }
+    .f7-price-carry{
+        width:25%;
+    }
+    .f7-price-carry div{
+        text-align:center ;
+        background-image:url(../../img/down.png);
+        background-repeat: no-repeat;
+        background-position:right;
+        background-size:13px;
+        width:100%;
+        font-size: 14px;
+        /*margin-right:50px;*/
+    }
+    .f7-price-right{
+        width:2%;
+        text-align: center;
+        margin-top:0;
+        font-size:20px;
+        margin-left:13px;
+    }
+    .f7-price-weight input::-webkit-input-placeholder{
+        padding-left:10px;
+    }
+    .f7-price-more button{
+        background-color:#9CCE13;
+        border:none;
+        height:25px;
+        width:100%;
+        color:#fff;
+        border-radius:3px;
+        margin-left:10px;
+        font-size: 14px;
+        line-height: 25px;
+    }
+
+
+
+
+
+
+  /*.f7-index{*/
     /*background-image:url(../../img/car_1.png);*/
   /*}*/
   .price{
-      border-bottom:3px solid #9cce13;
+      border-bottom:3px solid #9CCE13;
   }
+
   .f7-work-header{
     padding-top:4%;
     background-color:#04538e;
@@ -292,7 +418,7 @@
     padding-right:6%;
   }
   .f7-work-bottom .f7-btn1>.tabbtn,.f7-work-bottom .f7-btn2>.tabbtn{
-    background-color: #9cce13;
+    background-color: #9CCE13;
   }
     .f7-work-top{
         height:30px;
@@ -420,6 +546,7 @@
     display:block;
     height:40px;
     line-height:40px;
+    clear:both;
   }
   .f7-work-title span{
     color:#e60012;
@@ -468,7 +595,7 @@
   }
   .f7-work-package-right-top button{
     float:right;
-    background-color:#bbdef9;
+    background-color:#6faedf;
     border:none;
     height:30px;
     width:50%;
@@ -534,7 +661,7 @@
     color:#04538e;
   }
   .f7-work-sure{
-    background-color:#b1df6f;
+    background-color:#9CCE13;
     padding-left:6%;
     font-size:14px;
     color:#fff;
@@ -546,6 +673,9 @@
 
 
   /***********底部***********/
+    .sh-footer .f7-index{
+        background-image: url(../../img/car_1.png);
+    }
   .sh-footer{
     display: flex;
     width: 100%;
@@ -600,7 +730,7 @@
     width:100%;
   }
   .sh-footer-bgcomm-shop {
-    background-image: url("../../img/vault.png");
+    background-image: url("../../img/vault_1.png");
   }
   .sh-footer-bgcomm-user {
     background-image: url("../../img/mine.png");

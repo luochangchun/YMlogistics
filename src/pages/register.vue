@@ -7,6 +7,7 @@
                      <input type="text"placeholder="请输入手机号">
                      <a href="#">获取验证码</a>
                 </div>
+                <input class="f7-register-all-bottom" type="text" placeholder="请输入身份证号">
                 <input class="f7-register-all-bottom" type="text" placeholder="请输入验证码">
                 <a href="/carNum/"><button class="btn">下一步</button></a>
                 <p>手机号是验证身份、找回密码、收款支付时的重要安全凭证。</p>
@@ -55,7 +56,7 @@
         padding-right:6%;
         height:40px;
         border:none;
-        margin-bottom:10px;
+        margin-top:10px;
     }
     .f7-register-all p{
         margin-left:6%;

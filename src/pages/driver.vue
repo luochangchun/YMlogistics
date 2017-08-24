@@ -2,7 +2,7 @@
     <f7-page>
         <f7-navbar title="司机管理" back-link="Back" sliding>
             <div class="right">
-                <a href="/add/"style="font-size:14px;">添加</a>
+                <a href="/addPhoto/" style="font-size:14px;"><span v-show="!driverActive">添加</span></a>
             </div>
         </f7-navbar>
         <div class="f7-driver-all">
@@ -22,7 +22,6 @@
                         </div>
                         <div class="f7-enjoy-list-title"style="width:80%;height:40px;">
                             陈子福 13430262691
-                            <span class="f7-driver-list-approve">已认证</span>
                         </div>
                         <a @click="isSure=true;isSure1=false" class="f7-driver-list-right">修改</a>
                     </div>
@@ -34,6 +33,10 @@
                     <div class="f7-driver-list">
                         <span>手机号</span> <input  placeholder="请输入手机号">
                     </div>
+                    <div class="f7-driver-list">
+                        <span>手机号</span> <input  placeholder="请输入身份证号">
+                    </div>
+                    <button class="btn" @click="isSure1=true;isSure=false">返回</button>
                 </div>
             </div>
 
@@ -48,7 +51,7 @@
                             <div class="f7-driver-true">
                                 <img src="../../img/rights.png" alt="">&nbsp;
                             </div>
-                            <p>已认证</p>
+                            <p>已审核</p>
                         </div>
                         <span>驾驶证</span>
                     </div>
@@ -110,7 +113,7 @@
     .f7-driver-verified{
         width:100px;
         height:65px;
-        border:1px solid #9cce13;
+        border:1px solid #9CCE13;
         margin-left:6%;
         border-radius:5px;
     }
@@ -138,7 +141,7 @@
     }
 
     .driver{
-        border-bottom:3px solid #9cce13;
+        border-bottom:3px solid #9CCE13;
     }
     .f7-work-information div{
         float:left;
@@ -168,14 +171,6 @@
         display:inline-block;
         line-height:40px;
     }
-
-    .f7-driver-list-approve{
-        font-size:14px;
-        color:#d6ab00;
-        border:2px solid #d6ab00;
-        border-radius:5px;
-    }
-
     .f7-driver-photo{
         background-color:#fff;
         height:120px;

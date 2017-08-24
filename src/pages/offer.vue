@@ -1,6 +1,6 @@
 <template>
     <f7-page>
-        <f7-navbar title="抢单报价" back-link="Back" sliding></f7-navbar>
+        <f7-navbar title="待确认详情" back-link="Back" sliding></f7-navbar>
         <f7-block style="margin:0;padding:0">
             <div class="" style="margin:0 auto">
                 <div class="f7-work-two">
@@ -38,22 +38,22 @@
                     <p>安徽合肥经开区耕耘路与青龙潭路交口(卸货耗时:0小时)</p>
                 </div>
                 <div style="background-color:#fff;padding-bottom:10px;">
-                    <div class="f7-work-accounts" style="margin-top:25px;">
+                    <p class="f7-sure-p2">报价：￥4000.00</p>
+                    <div class="f7-work-accounts" style="margin-top:-5px;">
+                        <p style="margin-top:-20px;">到手价为：1000.00元</p>
                         <p><span>结算方式：&nbsp;</span>全额回单付</p>
                         <p>所有运费在电子回单和纸质回单确认后支付给车主</p>
                     </div>
-                    <div class="f7-competing-input">
-                        <input type="text"placeholder="元">
-                    </div>
-                    <input class="s1" type="checkbox" value="" onmouseout="this.className=''" onmouseover="this.className='s1'" />我已阅读并同意《运输协议》
+
+                    <div style="text-align:center;font-size:14px;height:20px;line-height:20px;background-color:#fff;margin-top:20px;margin-bottom:10px;">发货人拒绝还价，抢单请尽快</div>
+                    <input class="s1" type="checkbox" value="">我已阅读并同意《运输协议》
                 </div>
-                <button @click="openPrice" class="btn">立刻报价</button>
+                <button class="btn" @click="openCancel" style="background-color:#e60012">取消报价</button>
             </div>
         </f7-block>
     </f7-page>
 </template>
-
-<script>
+<script type="text/ecmascript-6">
 	export default {
 //		data() {
 //			return {
@@ -64,9 +64,9 @@
 //			};
 //		},
 		methods: {
-			openPrice(){
+			openCancel(){
 				let app = new Framework7();
-				app.confirm('报价3000.00元，到手价3000.00元；<br><br>收款银行：中国工商银行（李晓00）<br>账号：6222023909389892322;<br> <br>订单信息：无锡→合肥，10方/10吨 重货，总里程361公里，结算方式：全额回单付所有运费在电子回单和纸质回单确认后支付给车主','请核对报价', function () {
+				app.confirm('<br><br><br><br><br>','提示', function () {
 					window.location.href = "tel:123465798";
 				})
 			}
@@ -74,23 +74,6 @@
 	}
 </script>
 
-
 <style>
-    .f7-competing-input{
-        padding-left:6%;
-        width:60%;
-        margin:auto;
-    }
-    .f7-competing-input input{
-        width:75%;
-        height:40px;
-        padding-right:6%;
-        padding-left:6%;
-        background-color:#EFEFF4;
-        border:none;
-        margin-bottom:10px;
-    }
-    .f7-competing-input>::-webkit-input-placeholder{
-        text-align:right;
-    }
+
 </style>

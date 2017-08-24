@@ -17,23 +17,20 @@
             <!--固定底部导航栏-->
             <div v-if="" class="sh-footer">
                 <!--<a style="display: none" id="goabout" href="/about/"></a>-->
-                <a href="//"><div class="sh-footer-bgcomm sh-footer-bgcomm-index":class="classA"><span>干活</span></div></a>
-                <a href="/enjoy/" ><div class="sh-footer-bgcomm sh-footer-bgcomm-design":class="classB" ><span>享受</span></div></a>
-                <a href="/vault/"><div class="sh-footer-bgcomm sh-footer-bgcomm-shop":class="classC"><span>金库</span></div></a>
-                <a href="/mine/"><div class="sh-footer-bgcomm sh-footer-bgcomm-user":class="classD"><span>我</span></div></a>
+                <a href="/index/"><div class="sh-footer-bgcomm sh-footer-bgcomm-index"><span>干活</span></div></a>
+                <a href="javascript:;" ><div class="sh-footer-bgcomm sh-footer-bgcomm-design f7-enjoy"><span>享受</span></div></a>
+                <a href="/vault/"><div class="sh-footer-bgcomm sh-footer-bgcomm-shop"><span>金库</span></div></a>
+                <a href="/mine/"><div class="sh-footer-bgcomm sh-footer-bgcomm-user"><span>我</span></div></a>
             </div>
         </f7-block>
     </f7-page>
 </template>
 
 <script>
+
 	export default {
 		data() {
 			return {
-				classA: '',
-				classB: '',
-				classC: '',
-				classD: '',
 			};
 		},
 		methods: {
@@ -48,6 +45,12 @@
 </script>
 
 <style>
+    .f7-enjoy{
+        background-image: url(../../img/enjoy_1.png);
+    }
+    .f7-enjoy>span{
+        color:rgb(4, 83, 142);
+    }
     .min-height-flex{
         min-height: calc(100vh - 95px);
     }

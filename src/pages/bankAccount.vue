@@ -7,7 +7,7 @@
         </f7-navbar>
             <div class=f7-work-list style="height:120px;margin-bottom:2%">
                 <div class=f7-work-list-left-img>
-                    <img src=../../img/2.png>
+                    <img src=../../img/bank_card.png>
                 </div>
                 <div class=f7-work-package-right>
                     <div class=f7-work-package-right-bottom style="border:none;">
@@ -23,7 +23,7 @@
             </div>
             <div class=f7-work-list style="height:120px;margin-bottom:2%">
                 <div class=f7-work-list-left-img>
-                    <img src=../../img/2.png>
+                    <img src=../../img/bank_card.png>
                 </div>
                 <div class=f7-work-package-right>
                     <div class=f7-work-package-right-bottom style="border:none;">

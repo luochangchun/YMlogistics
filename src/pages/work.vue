@@ -19,7 +19,7 @@
                 <div class="f7-vault-header-box">
                     <div class="f7-vault-header-box-top">
                         <a href=""><div class="f7-vault-notice"style="background-color:#f9d679;"><span>提货须知</span></div></a>
-                        <a href=""><div class="f7-vault-abnormal"style="background-color:#e8aead"><span>异常信息</span></div></a>
+                        <a href="/abnormal/"><div class="f7-vault-abnormal"style="background-color:#e8aead"><span>异常信息</span></div></a>
                     </div>
                     <div class="f7-vault-header-box-bottom">
                         <a href=""><div class="f7-vault-receipt"style="background-color: #d4ea97"><span>回单拍照</span></div></a>
@@ -268,6 +268,7 @@
         font-size:16px;
         height:40px;
         line-height:40px;
+        color:#9CCE13;
     }
     .f7-work-haulway-one{
         margin-bottom: -10px;

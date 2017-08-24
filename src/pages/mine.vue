@@ -53,10 +53,10 @@
             <!--固定底部导航栏-->
             <div v-if="" class="sh-footer">
                 <!--<a style="display: none" id="goabout" href="/about/"></a>-->
-                <a href="/index/"><div class="sh-footer-bgcomm sh-footer-bgcomm-index":class="classA"><span>干活</span></div></a>
-                <a href="/enjoy/"><div class="sh-footer-bgcomm sh-footer-bgcomm-design":class="classB" ><span>享受</span></div></a>
-                <a href="/vault/"><div class="sh-footer-bgcomm sh-footer-bgcomm-shop":class="classC"><span>金库</span></div></a>
-                <a href="/mine/"><div class="sh-footer-bgcomm sh-footer-bgcomm-user":class="classD"><span>我</span></div></a>
+                <a href="/index/"><div class="sh-footer-bgcomm sh-footer-bgcomm-index f7-work"><span>干活</span></div></a>
+                <a href="/enjoy/"><div class="sh-footer-bgcomm sh-footer-bgcomm-design" ><span>享受</span></div></a>
+                <a href="/vault/"><div class="sh-footer-bgcomm sh-footer-bgcomm-shop"><span>金库</span></div></a>
+                <a href="javascript:;"><div class="sh-footer-bgcomm sh-footer-bgcomm-user f7-mine"><span>我</span></div></a>
             </div>
         </f7-block>
     </f7-page>
@@ -66,16 +66,19 @@
 	export default {
 		data() {
 			return {
-				classA: '',
-				classB: '',
-				classC: '',
-				classD: '',
+
             };
         }
     }
 </script>
 
 <style>
+    .f7-mine {
+        background-image: url(../../img/mine_1.png);
+    }
+    .f7-mine>span{
+        color:rgb(4, 83, 142);
+    }
     .f7-mine-header{
         background-color:#04538e;
         height:100px;
@@ -98,7 +101,7 @@
         padding-left:10%;
     }
     .f7-mine-headRight-top{
-        font-size:20px;
+        font-size:18px;
         color:#fff;
         height:40px;
         line-height:67px;
