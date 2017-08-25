@@ -34,7 +34,7 @@
                         <span>手机号</span> <input  placeholder="请输入手机号">
                     </div>
                     <div class="f7-driver-list">
-                        <span>手机号</span> <input  placeholder="请输入身份证号">
+                        <span>身份证号</span> <input placeholder="请输入身份证号">
                     </div>
                     <button class="btn" @click="isSure1=true;isSure=false">返回</button>
                 </div>

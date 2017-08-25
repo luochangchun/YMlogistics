@@ -30,12 +30,12 @@
                 <p class="f7-sure-p1">提货地址</p>
                 <div class="f7-sure-list">
                     <span>1</span>
-                    <p>江西无锡新吴区硕放街道墙宅路1号(提货耗时:0小时)</p>
+                    <p>江西无锡新吴区硕放街道墙宅路1号（提货耗时:0小时）</p>
                 </div>
                 <p class="f7-sure-p1">卸货地址</p>
                 <div class="f7-sure-list">
                     <span>1</span>
-                    <p>安徽合肥经开区耕耘路与青龙潭路交口(卸货耗时:0小时)</p>
+                    <p>安徽合肥经开区耕耘路与青龙潭路交口（卸货耗时:0小时）</p>
                 </div>
                 <div style="background-color:#fff;padding-bottom:10px;">
                     <p class="f7-sure-p2">报价：￥4000.00</p>

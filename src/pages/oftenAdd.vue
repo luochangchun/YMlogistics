@@ -7,16 +7,11 @@
                 <div class="">编码</div>
                 <div>省份</div>
             </div>
-            <a href="/city/">
+            <a href="/city/" v-for="(item,index) in shengList">
                 <div class="chip f7-often-chip">
-                    <div class="">210000</div>
-                    <div>辽宁省</div>
-                </div>
-            </a>
-            <a href="/">
-                <div class="chip f7-often-chip">
-                    <div class="">310000</div>
-                    <div>上海市</div>
+                    <div class="">{{item.num}}</div>
+                    <div>{{item.sheng}}</div>
+                    <a href=""style="color:#000;font-size:14px;">已选</a>
                 </div>
             </a>
         </f7-block>
@@ -24,7 +19,29 @@
 </template>
 
 <script type="text/ecmascript-6">
+	export default {
+		data() {
+			return {
+				shengList: [
+					{
+						num: '210000',
+						sheng: '广东省',
+					},
+					{
+						num: '310000',
+						sheng: '湖北省'
+					},
+					{
+						num: '310000',
+						sheng: '湖北省'
+					}
+				]
+			};
+		},
+		methods: {
 
+		}
+	}
 </script>
 
 <style>

@@ -150,14 +150,14 @@
                 <div v-show="priceActive">
                     <div class="f7-index-price">
                         <div class="f7-price-carry" id="DBTH">
-                            <div>卸货地</div>
+                           <input id="demo1" type="text" readonly="" placeholder="提货地"  value="广东省,深圳市,南山区"/>                                   <input id="value1" type="hidden" value="20,234,504"/>
                         </div>
-                        <div class="f7-price-right">→</div>
+                        <div class="f7-price-right" style="width:10%">→</div>
                         <div class="f7-price-carry">
-                            <div>卸货地</div>
+                            <input id="demo2" type="text" readonly="" placeholder="卸货地"  value="广东省,深圳市,南山区"/>                                   <input id="value2" type="hidden" value="20,234,504"/>
                         </div>
-                        <div class="f7-price-carry">
-                            <div>提货时间</div>
+                        <div class="f7-price-carry" style="margin-left:15px;">
+                            <input id="demo3" type="text" readonly="" placeholder="提货时间" value="2017-08-25"data-lcalendar="2010-01-11,2019-12-31"/>                                          <input id="value3" type="hidden" value=""/>
                         </div>
                         <div class="f7-price-more">
                             <button @click="showMoreActive">更多</button>
@@ -210,38 +210,38 @@
                 </div>
 
                 <div v-show="!priceActive">
-                     <div class="f7-index-price" style="margin-bottom:10px;">
-                         <div class="f7-price-carry">
-                             <div>提货地</div>
-                         </div>
-                         <div class="f7-price-right">→</div>
-                         <div class="f7-price-carry">
-                             <div>卸货地</div>
-                         </div>
-                         <div class="f7-price-carry">
-                             <div>提货时间</div>
-                         </div>
-                         <div class="f7-price-more">
-                             <button @click="showAmoreActive">更多</button>
-                         </div>
-                     </div>
-                     <div v-show="AmoreActive">
-                         <div class="f7-price-weight">
-                             <p>重量（吨）:</p>
-                             <input type="text"placeholder="最低值">
-                             <span>到</span>
-                             <input type="text"placeholder="最高值" >
-                         </div>
-                         <div class="f7-price-weight">
-                             <p>体积（方）:</p>
-                             <input type="text"placeholder="最低值">
-                             <span>到</span>
-                             <input type="text"placeholder="最高值" >
-                         </div>
-                         <button class="btn">完成</button>
-                    </div>
+                     <!--<div class="f7-index-price" style="margin-bottom:10px;">-->
+                         <!--<div class="f7-price-carry">-->
+                             <!--<div>提货地</div>-->
+                         <!--</div>-->
+                         <!--<div class="f7-price-right">→</div>-->
+                         <!--<div class="f7-price-carry">-->
+                             <!--<div>卸货地</div>-->
+                         <!--</div>-->
+                         <!--<div class="f7-price-carry">-->
+                             <!--<div>提货时间</div>-->
+                         <!--</div>-->
+                         <!--<div class="f7-price-more">-->
+                             <!--<button @click="showAmoreActive">更多</button>-->
+                         <!--</div>-->
+                     <!--</div>-->
+                     <!--<div v-show="AmoreActive">-->
+                         <!--<div class="f7-price-weight">-->
+                             <!--<p>重量（吨）:</p>-->
+                             <!--<input type="text"placeholder="最低值">-->
+                             <!--<span>到</span>-->
+                             <!--<input type="text"placeholder="最高值" >-->
+                         <!--</div>-->
+                         <!--<div class="f7-price-weight">-->
+                             <!--<p>体积（方）:</p>-->
+                             <!--<input type="text"placeholder="最低值">-->
+                             <!--<span>到</span>-->
+                             <!--<input type="text"placeholder="最高值" >-->
+                         <!--</div>-->
+                         <!--<button class="btn">完成</button>-->
+                    <!--</div>-->
                     <div v-show="!AmoreActive">
-                    <div class=f7-work-list>
+                    <div class=f7-work-list style="margin-top:10px;">
                         <div class=f7-work-list-left-img>
                            <img src=../../img/2.png>
                         </div>
@@ -289,7 +289,9 @@
 </template>
 
 <script type="text/ecmascript-6">
-
+    const ididi = require('static/js/LAreaData1.js')
+	import 'static/js/LArea'
+	import 'static/js/lCalendar'
 		export default{
 			data(){
 				return{
@@ -301,6 +303,46 @@
 	            };
 	        },
 	        mounted(){
+				var s1 = new LArea()
+				s1.init({
+					'trigger': '#demo1', //触发选择控件的文本框，同时选择完毕后name属性输出到该位置
+					'valueTo': '#value1', //选择完毕后id属性输出到该位置
+					'keys': {
+						id: 'id',
+						name: 'name'
+					}, //绑定数据源相关字段 id对应valueTo的value属性输出 name对应trigger的value属性输出
+					'type': 1, //数据源类型
+					'data': ididi.sss //数据源
+				});
+				var s2 = new LArea()
+				s2.init({
+					'trigger': '#demo2', //触发选择控件的文本框，同时选择完毕后name属性输出到该位置
+					'valueTo': '#value2', //选择完毕后id属性输出到该位置
+					'keys': {
+						id: 'id',
+						name: 'name'
+					}, //绑定数据源相关字段 id对应valueTo的value属性输出 name对应trigger的value属性输出
+					'type': 1, //数据源类型
+					'data': ididi.sss //数据源
+				});
+
+
+
+//				var calendar = new lCalendar();
+//				calendar.init({
+//					'trigger': '#demo3',
+//					'type': 'date'
+//				});
+				var s3 = new lCalendar();
+				s3.init({
+					'trigger': '#demo3',
+					'type': 'datetime'
+				});
+//				var calendartime = new lCalendar();
+//				calendartime.init({
+//					'trigger': '#demo3',
+//					'type': 'time'
+//				});
 
 	        },
 			methods:{
@@ -325,6 +367,8 @@
 
 
 <style>
+    @import "../../static/css/LArea.css";
+    @import "../../static/css/lCalendar.css";
     .f7-price-weight{
         padding-left:6%;
         padding-right:2%;
@@ -355,7 +399,6 @@
 
     .f7-index-price{
         padding-left:0;
-        padding-right:2%;
         margin-top:10px;
         height:40px;
         line-height:40px;
@@ -363,27 +406,34 @@
     }
     .f7-index-price div{
         float:left;
+        width: 22%;
+        text-align: center;
     }
     .f7-price-carry{
         width:25%;
     }
-    .f7-price-carry div{
+    .f7-price-carry input{
         text-align:center ;
         background-image:url(../../img/down.png);
         background-repeat: no-repeat;
         background-position:right;
         background-size:13px;
-        width:100%;
+        width:75%;
         font-size: 14px;
-        /*margin-right:50px;*/
+        border:none;
+        padding-right:12%;
+        text-overflow: ellipsis;
+        padding-left: 10%;
     }
     .f7-price-right{
-        width:2%;
+        width:1%;
         text-align: center;
         margin-top:0;
-        font-size:20px;
-        margin-left:13px;
+        font-size:16px;
+        margin-left:-2px;
+        margin-right:-13px;
     }
+
     .f7-price-weight input::-webkit-input-placeholder{
         padding-left:10px;
     }
@@ -391,10 +441,10 @@
         background-color:#9CCE13;
         border:none;
         height:25px;
-        width:100%;
+        width:50px;
         color:#fff;
         border-radius:3px;
-        margin-left:10px;
+        margin-left:15px;
         font-size: 14px;
         line-height: 25px;
     }
