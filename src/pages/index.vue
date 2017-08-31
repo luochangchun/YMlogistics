@@ -142,7 +142,7 @@
               </div>
             </div>
 
-            <div v-show="!btnActive"style="min-height: calc(100vh - 217px );">
+            <div v-show="!btnActive"style="min-height: calc(100vh - 187px );">
                 <div class="f7-work-quote">
                     <div :class="{price:priceActive}" @click="priceActive=true">待报价</div>
                     <div :class="{price:!priceActive}" @click="priceActive=false">已报价</div>

@@ -9,7 +9,7 @@
             <div class="chip f7-often-chip">
                 <div class="">省份</div>
                 <div>城市</div>
-                <a style="color:#000;font-size:14px;">删除</a>
+                <a style="color:#000;font-size:14px;"></a>
             </div>
             <div class="chip f7-often-chip" v-for="(item,index) in cityInfoList">
                 <div class="">{{item.sheng}}</div>

@@ -22,8 +22,8 @@
                 <a href="#" style="float:right">忘记密码?</a>
             </div>
             <div class="" @click="openPhone">
-                <div class="f7-enjoy-list" style="bottom:0;position:fixed;width:100%;height:40px;left: 0;">
-                    <div class="f7-enjoy-list-title" style="text-align:center;width:100%;margin-left:-6%;font-size:18px;color:#007aff">
+                <div class="f7-enjoy-list" style="bottom:0;position:fixed;width:100%;height:55px;left: 0;">
+                    <div class="f7-enjoy-list-title" style="text-align:center;width:100%;margin-left:-6%;font-size:18px;color:#007aff;line-height:55px;">
                         拨打客服电话
                     </div>
                 </div>

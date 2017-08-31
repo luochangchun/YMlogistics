@@ -20,7 +20,7 @@
                     <div class="f7-enjoy-list-title">
                         车辆信息
                     </div>
-                    <a href="//"class="f7-enjoy-list-right">＞</a>
+                    <a href="/vehicleInformation/"class="f7-enjoy-list-right">＞</a>
                 </a>
                 <a href="/driver/" class="f7-enjoy-list" style="clear:both;">
                     <div class="f7-enjoy-list-img">
@@ -93,7 +93,9 @@
     }
     .f7-mine-headPortrait img{
         width:80px;
+        height:80px;
         margin-top:10px;
+        border-radius:50%;
     }
     .f7-mine-headRight{
         width:60%;
