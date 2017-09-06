@@ -20,6 +20,10 @@ export default [
 		component: require('./pages/addPhoto.vue')
 	},
 	{
+		path: '/history/',
+		component: require('./pages/history.vue')
+	},
+	{
 		path: '/setting/',
 		component: require('./pages/setting.vue')
 	},

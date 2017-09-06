@@ -22,9 +22,47 @@
     </f7-page>
 </template>
 
-<script>
-	export default {}
-</script>
+<!--<script>-->
+	<!--export default {-->
+		<!--data() {-->
+			<!--return {-->
+				<!--carname: null,-->
+				<!--pwd: null,-->
+				<!--isBoxtwo: false,-->
+				<!--isboxone: true,-->
+				<!--sendData: {-->
+					<!--phone: '',-->
+					<!--code: '',-->
+					<!--password: '',-->
+					<!--re_password: '',-->
+					<!--company: '',-->
+					<!--license: '',-->
+					<!--img_url: '',-->
+				<!--}-->
+			<!--}-->
+		<!--},-->
+		<!--beforeMount() {-->
+			<!--getData(this.phone,this.code,this.password,this.re_password,this.company,this.license,this.img_url);-->
+		<!--},-->
+		<!--registerData(phone,code,password,re_password,company,license,img_url){-->
+			<!--this.axios.post('http://192.168.11.220/YM/api/Register/registerCargo', {-->
+				<!--phone: phone,-->
+				<!--code: code,-->
+				<!--password: password,-->
+				<!--re_password: re_password,-->
+				<!--company: company,-->
+				<!--license: license,-->
+				<!--img_url: img_url-->
+			<!--})-->
+				<!--.then(function (response) {-->
+					<!--console.log("注册成功!");-->
+				<!--})-->
+				<!--.catch(function (error) {-->
+					<!--console.log("手机号有误!");-->
+				<!--});-->
+		<!--}-->
+	<!--}-->
+<!--</script>-->
 
 <style>
     .f7-register-all-top{

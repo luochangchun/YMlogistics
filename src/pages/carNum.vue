@@ -1,6 +1,6 @@
 <template>
     <f7-page>
-        <f7-navbar title="待确认订单详情" back-link="Back" sliding></f7-navbar>
+        <f7-navbar title="车牌号注册" back-link="Back" sliding></f7-navbar>
         <f7-block style="margin:0;padding:0">
             <div class="f7-login-list" v-show="isboxone">
                 <ul>
@@ -13,7 +13,10 @@
                 </ul>
             </div>
             <div class="f7-login-input">
-                <div class="textcarnum"><span v-text="carname"></span><i @click="showshow" style="float:right;display:block;">delete</i></div>
+                <div class="textcarnum">
+                    <span v-text="carname"></span>
+                    <i @click="showshow" style="float:right;display:block;"><img src="../../img/delete.png" alt=""></i>
+                </div>
                 <input type="text" v-model="pwd"placeholder="请设置密码(6位数字)">
                 <a href="/carInformation/"><button class="btn">下一步</button></a>
             </div>
@@ -73,5 +76,9 @@
         margin-left:6%;
         margin-right:6%;
         font-size:12px;
+    }
+    .textcarnum i img{
+        width:20px;
+        padding-top:10px;
     }
 </style>

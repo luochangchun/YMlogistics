@@ -5,7 +5,7 @@
             <div class="min-height-flex" @click="openPhone">
                 <div class="f7-enjoy-list">
                     <div class="f7-enjoy-list-img">
-                        <img src="../../img/location.png">
+                        <img src="../../img/phone.jpg">
                     </div>
                     <div class="f7-enjoy-list-title">
                         拨打客服电话

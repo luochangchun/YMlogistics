@@ -15,7 +15,7 @@
                   <div>庄899<span>&nbsp;&nbsp;&nbsp;鄂A54651</span></div>
                 </div>
                 <div class="f7-work-top-right">
-                  <button>历史运单</button>
+                  <a href="/history/"><button>历史运单</button></a>
                   <div class=f7-work-envelope>
                     <img src=../../img/envelope.png>
                     <span class=f7-work-red>7</span>

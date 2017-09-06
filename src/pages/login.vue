@@ -15,7 +15,7 @@
             <div class="f7-login-input">
                 <input placeholder="填写手机号">
                 <input type="text" v-model="pwd"placeholder="密码">
-                <button class="btn">登录</button>
+                <button class="btn" @click="cencelBtn">登录</button>
             </div>
             <div class="f7-login-footer">
                 <a href="/register/" style="float:left">注册新用户</a>
@@ -42,42 +42,79 @@
 				carname: null,
 				pwd: null,
 				isBoxtwo: false,
-				isboxone: true
+				isboxone: true,
+//                sendData: {
+//					phone: '',
+//					code: '',
+//					password: '',
+//					re_password: '',
+//					company: '',
+//					license: '',
+//					img_url: '',
+//                }
             };
         },
+//        beforeMount() {
+//			getData(this.phone,this.code,this.password,this.re_password,this.company,this.license,this.img_url);
+//        },
 		methods: {
 			openPhone() {
 				let app = new Framework7();
 				app.confirm('123465798', '拨打客服电话', function () {
 					window.location.href = "tel:123465798";
 				})
-            },
-			getFont(item){
+			},
+			getFont(item) {
 				this.carname = item;
-				if(item.length <= 0){
-                    this.isboxone = T;
-                }else{
+				if (item.length <= 0) {
+					this.isboxone = T;
+				} else {
 					this.isBoxtwo = T;
 					this.isboxone = F;
-                }
-            },
-			addNum(item){
-				if(this.carname.length>=7){
+				}
+			},
+			addNum(item) {
+				if (this.carname.length >= 7) {
 					return;
-                }
-				this.carname = this.carname+item;
-            },
-			showshow(){
-				this.carname = this.carname.substring(0,this.carname.length-1);
-				if(this.carname.length<=0){
+				}
+				this.carname = this.carname + item;
+			},
+			showshow() {
+				this.carname = this.carname.substring(0, this.carname.length - 1);
+				if (this.carname.length <= 0) {
 					this.isboxone = T;
 					this.isBoxtwo = F;
-                }else{
+				} else {
 					this.isboxone = F;
 					this.isBoxtwo = T;
-                }
-            }
-        }
+				}
+			},
+//            registerData(phone,code,password,re_password,company,license,img_url){
+//				this.axios.post('http://192.168.11.220/YM/api/Register/registerCargo', {
+//					phone: phone,
+//					code: code,
+//					password: password,
+//					re_password: re_password,
+//					company: company,
+//					license: license,
+//					img_url: img_url
+//				})
+//					.then(function (response) {
+//						console.log(response);
+//					})
+//					.catch(function (error) {
+//						console.log(error);
+//					});
+//            }
+			cencelBtn() {
+				let self = this;
+				let app = new Framework7();
+				app.confirm('', '确定登录？', function () {
+					self.$router.load({url: '/mine/'})
+				})
+			}
+
+		}
     }
 </script>
 

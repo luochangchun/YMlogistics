@@ -3,7 +3,7 @@
         <f7-navbar title="已收款转账" back-link="bank" sliding></f7-navbar>
         <f7-block style="padding:0;margin-top:-10px">
             <div class="f7-bankRecord-list-all">
-                <div class="f7-bankRecord-list">
+                <a href="/work/" class="f7-bankRecord-list">
                     <div class="f7-bankRecord-list-top">
                         <div class="f7-bankRecord-list-topLeft">
                             运单号：20161124850784
@@ -20,8 +20,8 @@
                             4600.00元
                         </div>
                     </div>
-                </div>
-                <div class="f7-bankRecord-list">
+                </a>
+                <a href="/work/" class="f7-bankRecord-list">
                     <div class="f7-bankRecord-list-top">
                         <div class="f7-bankRecord-list-topLeft">
                             运单号：20161124850784
@@ -38,8 +38,8 @@
                             4600.00元
                         </div>
                     </div>
-                </div>
-                <div class="f7-bankRecord-list">
+                </a>
+                <a href="/work/" class="f7-bankRecord-list">
                     <div class="f7-bankRecord-list-top">
                         <div class="f7-bankRecord-list-topLeft">
                             运单号：20161124850784
@@ -56,8 +56,8 @@
                             4600.00元
                         </div>
                     </div>
-                </div>
-                <div class="f7-bankRecord-list">
+                </a>
+                <a href="/work/" class="f7-bankRecord-list">
                     <div class="f7-bankRecord-list-top">
                         <div class="f7-bankRecord-list-topLeft">
                             运单号：20161124850784
@@ -74,8 +74,8 @@
                             4600.00元
                         </div>
                     </div>
-                </div>
-                <div class="f7-bankRecord-list">
+                </a>
+                <a href="/work/" class="f7-bankRecord-list">
                     <div class="f7-bankRecord-list-top">
                         <div class="f7-bankRecord-list-topLeft">
                             运单号：20161124850784
@@ -92,8 +92,8 @@
                             4600.00元
                         </div>
                     </div>
-                </div>
-                <a href="//" class="f7-bankRecord-more">查看更多</a>
+                </a>
+                <a href="/" class="f7-bankRecord-more">查看更多</a>
             </div>
         </f7-block>
     </f7-page>
@@ -120,6 +120,7 @@
         background-color:#fff;
         border-bottom:1px solid #d9d9d9;
         padding:4% 4% 2% 6%;
+        display: block;
          }
 
     .f7-bankRecord-list-top{

@@ -14,8 +14,8 @@
                 </a>
 
                 <a href="/vehicleInformation/" class="f7-enjoy-list" style="clear:both;">
-                    <div class="f7-enjoy-list-img">
-                        <img src="../../img/location.png">
+                    <div class="f7-enjoy-list-img"style="margin-top:10px;">
+                        <img src="../../img/car0.png">
                     </div>
                     <div class="f7-enjoy-list-title">
                         车辆信息
@@ -23,8 +23,8 @@
                     <a href="/vehicleInformation/"class="f7-enjoy-list-right">＞</a>
                 </a>
                 <a href="/driver/" class="f7-enjoy-list" style="clear:both;">
-                    <div class="f7-enjoy-list-img">
-                        <img src="../../img/location.png">
+                    <div class="f7-enjoy-list-img"style="margin-top:10px;">
+                        <img src="../../img/user-icon.png">
                     </div>
                     <div class="f7-enjoy-list-title">
                         司机信息
@@ -32,8 +32,8 @@
                     <a href="/driver/"class="f7-enjoy-list-right">＞</a>
                 </a>
                 <a href="/often/" class="f7-enjoy-list" style="clear:both;">
-                    <div class="f7-enjoy-list-img">
-                        <img src="../../img/location.png">
+                    <div class="f7-enjoy-list-img"style="margin-top:10px;">
+                        <img src="../../img/city.png">
                     </div>
                     <div class="f7-enjoy-list-title">
                         常跑信息
@@ -41,8 +41,8 @@
                     <a class="f7-enjoy-list-right">＞</a>
                 </a>
                 <a href="/setting/" class="f7-enjoy-list" style="clear:both;margin-top:10px">
-                    <div class="f7-enjoy-list-img">
-                        <img src="../../img/location.png">
+                    <div class="f7-enjoy-list-img"style="margin-top:10px;">
+                        <img src="../../img/setting.png">
                     </div>
                     <div class="f7-enjoy-list-title">
                         设置

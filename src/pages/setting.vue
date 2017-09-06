@@ -14,13 +14,23 @@
                 </div>
                 <a href="//"class="f7-enjoy-list-right">＞</a>
             </div>
-            <button class="btn">退出当前账号</button>
+            <button class="btn" @click="cencelBtn">退出当前账号</button>
         </f7-block>
     </f7-page>
 </template>
 
 <script>
-	export default {}
+	export default {
+		methods: {
+			cencelBtn() {
+				let self = this;
+				let app = new Framework7();
+				app.confirm('','确定退出账号？', function () {
+					self.$router.load({url: '/mine/'})
+				})
+			}
+		}
+    }
 </script>
 
 <style>
