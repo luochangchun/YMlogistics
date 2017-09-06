@@ -83,7 +83,7 @@ window.LArea = (function() {
 					'</div>' +
 					'</div>' +
 					'<div>' +
-					'<div class="gear area_county" data-areatype="area_county"></div>' +
+					'<div class="gear area_county" data-areatype="area_county" style="opacity: 0"></div>' +
 					'<div class="area_grid">' +
 					'</div>' +
 					'</div>' +
@@ -336,7 +336,8 @@ window.LArea = (function() {
 			var countyVal = parseInt(area_county.getAttribute("val"));
 			var countyText = area_county.childNodes[countyVal].textContent;
 			var countyCode = area_county.childNodes[countyVal].getAttribute('ref');
-			_self.trigger.value = provinceText + ((cityText)?(',' + cityText):(''))+ ((countyText)?(',' + countyText):(''));
+			// _self.trigger.value = provinceText + ((cityText)?(',' + cityText):(''))+ ((countyText)?(',' + countyText):(''));
+			_self.trigger.value = provinceText + ((cityText)?(',' + cityText):(''));
 			_self.value = [provinceVal, cityVal, countyVal];
 			if(this.valueTo){
 				this.valueTo.value= provinceCode +((cityCode)?(',' + cityCode):('')) + ((countyCode)?(',' + countyCode):(''));

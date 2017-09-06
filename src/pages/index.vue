@@ -150,14 +150,16 @@
                 <div v-show="priceActive">
                     <div class="f7-index-price">
                         <div class="f7-price-carry" id="DBTH">
-                           <input id="demo1" type="text" readonly="" placeholder="提货地"  value="广东省,深圳市,南山区"/>                                   <input id="value1" type="hidden" value="20,234,504"/>
+                           <input id="demo1" type="text" readonly="" placeholder="提货地"  value="广东省,深圳市,南山区"/>
+                           <input id="value1" type="hidden" value="20,234,504"/>
                         </div>
                         <div class="f7-price-right" style="width:10%">→</div>
                         <div class="f7-price-carry">
-                            <input id="demo2" type="text" readonly="" placeholder="卸货地"  value="广东省,深圳市,南山区"/>                                   <input id="value2" type="hidden" value="20,234,504"/>
+                            <input id="demo2" type="text" readonly="" placeholder="卸货地"  value="广东省,深圳市,南山区"/>
+                            <input id="value2" type="hidden" value="20,234,504"/>
                         </div>
                         <div class="f7-price-carry" style="margin-left:15px;">
-                            <input id="demo3" type="text" readonly="" placeholder="提货时间" value="2017-08-25"data-lcalendar="2010-01-11,2019-12-31"/>                                          <input id="value3" type="hidden" value=""/>
+                            <input id="demo3" type="text" readonly="" placeholder="提货时间" value="2017-08-25"data-lcalendar="2010-01-11,2019-12-31"/>                                                                   <input id="value3" type="hidden" value=""/>
                         </div>
                         <div class="f7-price-more">
                             <button @click="showMoreActive">更多</button>
