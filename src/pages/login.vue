@@ -55,7 +55,7 @@
             };
         },
 //        beforeMount() {
-//			getData(this.phone,this.code,this.password,this.re_password,this.company,this.license,this.img_url);
+//			this.getData(this.phone,this.code,this.password,this.re_password,this.company,this.license,this.img_url);
 //        },
 		methods: {
 			openPhone() {

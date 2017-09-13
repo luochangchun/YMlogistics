@@ -3,20 +3,20 @@
         <f7-navbar title="银行" back-link="Back" sliding></f7-navbar>
         <f7-block  style="padding:0">
             <div class="f7-add">
-                <div class="f7-add-list header">
+                <div class="f7-add-list header bank">
                     <span>开户银行</span>
                     <div style="width:73%;text-align:right;color:#000;">
                         中国工商银行
                         <a style="margin-right:-6%;color:#666;">＞</a>
                     </div>
                 </div>
-                <div class="f7-add-list">
+                <div class="f7-add-list bank">
                     <span>用户名</span> <input placeholder="开户人姓名">
                 </div>
                 <div class="f7-add-list">
                     <span>账号</span> <input  placeholder="银行卡号 / 储蓄账号">
                 </div>
-                <div class="f7-add-list">
+                <div class="f7-add-list bank">
                     <span>开户省市</span>
                     <div class="f7-price-carry" id="DBTH">
                         <input id="demo6" type="text" readonly="" placeholder="提货地"  value="广东省,深圳市"/>
@@ -77,9 +77,11 @@
 
 </script>
 <style>
+    .bank div{
+        float:left;
+    }
     .f7-add-list div{
         width:76%;
-        float:left;
         border:none;
         /*background-color:#5ac8fa;*/
         height:38px;

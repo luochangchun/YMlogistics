@@ -64,7 +64,7 @@
     .f7-enjoy-list-img{
         width:10%;
         float:left;
-        margin-top:5px;
+        margin-top:9px;
     }
     .f7-enjoy-list-img img{
         width:20px;

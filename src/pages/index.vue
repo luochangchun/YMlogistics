@@ -159,7 +159,7 @@
                             <input id="value2" type="hidden" value="20,234,504"/>
                         </div>
                         <div class="f7-price-carry" style="margin-left:15px;">
-                            <input id="demo3" type="text" readonly="" placeholder="提货时间" value="2017-08-25"data-lcalendar="2010-01-11,2019-12-31"/>                                                                   <input id="value3" type="hidden" value=""/>
+                            <input id="demo3" type="text" readonly=""placeholder="提货时间" value="2017-08-25"data-lcalendar="2010-01-11,2019-12-31"/>                                                                   <input id="value3" type="hidden" value=""/>
                         </div>
                         <div class="f7-price-more">
                             <button @click="showMoreActive">更多</button>
@@ -301,9 +301,30 @@
 					btnActive: true, //顶部按钮切换变量
                     priceActive: true,
 					moreActive:false,
-					AmoreActive:false
+					AmoreActive:false,
+					sendData: {
+						customer_sn:'',
+						ctime_pick:'',
+						address:'',
+						name:'',
+                        phone:'',
+						ctime_load:'',
+						address_load:'',
+						shr_name:'',
+						shr_phone:'',
+						goods_str:'',
+						goods_number:'',
+						dot_area:'',
+						mer_id:'',
+						driver_id:'',
+						amount_total:''
+					}
+
 	            };
 	        },
+			beforeMount() {
+				this.getData(this.sendData);
+			},
 	        mounted(){
 				var s1 = new LArea()
 				s1.init({
@@ -361,7 +382,16 @@
 					}else{
 						this.AmoreActive = true;
 					}
-				}
+				},
+				registerData(){
+				this.axios.post(this.ajax_head+'/YM/api/ goods /goods_list', {mei_id:'123' })
+					.then(function (response) {
+						console.log(response);
+					})
+					.catch(function (error) {
+						console.log(error);
+					});
+            }
 	        }
 	    };
 

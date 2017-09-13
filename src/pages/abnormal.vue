@@ -51,7 +51,7 @@
                         <div class="f7-abnormalB-input">类型 <input type="text"placeholder="金额（元）"></div>
                         <p>原因:</p>
                         <div class="f7-abnormalB-input"style="margin-top:-15px"><textarea type="text"></textarea></div>
-                        <button class="btn">确定</button>
+                        <button @click="cencelBtn" class="btn" style="background-color:#ddd">确定</button>
                     </div>
 
                     <div v-show="abnormalC" class="f7-abnormalC">
@@ -91,7 +91,6 @@
     </span>
 
 </template>
-
 <script type="text/ecmascript-6">
 
 	const YMWLNAME_list=["f7-work","f7-enjoy","f7-vault","f7-mine"];
@@ -104,12 +103,16 @@
 				abnormalC:false
 			};
 		},
-		mounted(){
-
-		},
 		methods: {
+			cencelBtn() {
+				let self = this;
+				let app = new Framework7();
+				app.confirm('','确定查看？', function () {
+					self.$router.load({url: '/work/'})
+				})
+			}
+		}
 
-        }
 	};
 
 </script>
@@ -146,7 +149,7 @@
         white-space:nowrap;
     }
     .f7-abnormal-table button{
-        background-color:#9CCE13;
+        background-color:#ddd;
         color:#fff;
         border:none;
     }

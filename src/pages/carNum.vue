@@ -14,11 +14,11 @@
             </div>
             <div class="f7-login-input">
                 <div class="textcarnum">
-                    <span v-text="carname"></span>
+                    <span v-text.trim="carname"></span>
                     <i @click="showshow" style="float:right;display:block;"><img src="../../img/delete.png" alt=""></i>
                 </div>
-                <input type="text" v-model="pwd"placeholder="请设置密码(6位数字)">
-                <a href="/carInformation/"><button class="btn">下一步</button></a>
+                <input type="text" v-model.trim="pwd"placeholder="请设置密码(6位数字)">
+                <a href="javascript:;"><button class="btn" @click="nexttwo">下一步</button></a>
             </div>
             <div class="f7-carNum-footer">
                 <p>轻触"下一步"按钮，即表示你同意<a href="#">《益马网服务协议》</a></p>
@@ -35,13 +35,37 @@
 			return {
 				car1Num: ['川','鄂','甘','赣','贵','桂','黑','泸','吉','冀','津','晋','京','辽','鲁','蒙','闽','宁','青','琼','陕','苏','皖','湘','新','渝','豫','粤','云','藏','浙','','','','',''],
 				NUM1Num: [0,1,2,3,4,5,6,7,8,9,"A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"],
-				carname: null,
-				pwd: null,
+				carname:"",
+				pwd: "",
 				isBoxtwo: false,
-				isboxone: true
+				isboxone: true,
+                allData: null
 			};
 		},
+        mounted(){
+			this.allData = this.$route.options.query.allData;
+        },
 		methods: {
+			nexttwo(){
+					var data = this.carname;
+//					if(!data.carname.length){
+//						myApp.alert('车牌号不能为空！');
+//						return;
+//					}
+//				if(!data.pwd.length){
+//					myApp.alert('密码不能为空！');
+//					return;
+//				}
+
+
+				var data = {
+                    carCode: this.carname,
+					pwd: this.pwd
+                }
+				var datas = Dom7.extend({}, this.allData, data);
+				console.log(datas);
+				this.$router.load({url: '/carInformation/', query: {allData: datas}});
+            },
 			getFont(item){
 				this.carname = item;
 				if(item.length <= 0){

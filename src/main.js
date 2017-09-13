@@ -32,6 +32,8 @@ import App from './app'
 Vue.use(Framework7Vue)
 
 Vue.prototype.axios = Axios;
+Vue.prototype.ajax_head = 'http://192.168.11.220'
+
 // Init App
 new Vue({
   el: '#app',

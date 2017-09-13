@@ -40,8 +40,8 @@
                     </div>
                     <a class="f7-enjoy-list-right">＞</a>
                 </a>
-                <a href="/setting/" class="f7-enjoy-list" style="clear:both;margin-top:10px">
-                    <div class="f7-enjoy-list-img"style="margin-top:10px;">
+                <a href="/setting/" class="f7-enjoy-list" style="clear:both;">
+                    <div class="f7-enjoy-list-img">
                         <img src="../../img/setting.png">
                     </div>
                     <div class="f7-enjoy-list-title">

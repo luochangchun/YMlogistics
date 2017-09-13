@@ -105,10 +105,6 @@ export default [
 		component: require('./pages/oil.vue')
 	},
 	{
-		path: '/app1/',
-		component: require('./pages/app1.vue')
-	},
-	{
 		path: '/abnormal/',
 		component: require('./pages/abnormal.vue')
 	},
@@ -120,6 +116,14 @@ export default [
       path: '/enjoy/',
       component: require('./pages/enjoy.vue')
   },
+	{
+		path: '/picture/',
+		component: require('./pages/picture.vue')
+	},
+	{
+		path: '/account/',
+		component: require('./pages/account.vue')
+	},
   {
   	  path: '/vault/',
   	  component: require('./pages/vault.vue')
