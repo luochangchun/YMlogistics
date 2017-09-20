@@ -5,7 +5,7 @@
             <div class="f7-register-all">
                 <div class="f7-register-all-top">
                      <input type="text"placeholder="请输入手机号" v-model.trim="sendData.phone">
-                     <!--<a href="#">获取验证码</a>-->
+                     <a href="#">获取验证码</a>
                 </div>
 				<input class="f7-register-all-bottom" v-model.trim="sendData.real_name" type="text" placeholder="请输入姓名">
                 <input class="f7-register-all-bottom" v-model.trim="sendData.card" type="text" placeholder="请输入身份证号">
@@ -13,7 +13,7 @@
 					<!--<input type="text" v-model="" placeholder="请输入验证码">-->
 					<!--<a href="#"><img src="../../img/u.jpg" alt=""></a>-->
 				<!--</div>-->
-				<!--<input class="f7-register-all-bottom" type="text" placeholder="请输入手机验证码">-->
+				<!--<input class="f7-register-all-bottom" type="text"v-model.trim="" placeholder="请输入手机验证码">-->
                 <input class="f7-register-all-bottom" v-model.trim="sendData.license_code" type="text" placeholder="请输入现住详细地址">
                 <a href="javascript:;"><button class="btn" @click="nextone">下一步</button></a>
                 <p>手机号是验证身份、找回密码、收款支付时的重要安全凭证。</p>
@@ -112,9 +112,7 @@
             },
 
 
-
-
-					cencelBtn() {
+            cencelBtn() {
 						let self = this;
 						let app = new Framework7();
 						app.confirm('', '确定登录？', function () {

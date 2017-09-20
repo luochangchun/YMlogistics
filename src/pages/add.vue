@@ -115,7 +115,7 @@
         padding-right:6%;
         line-height:40px;
         margin-top: -13px;
-        margin-bottom:6%;
+        margin-bottom:20px;
     }
     .f7-add-list span{
         width:20%;
@@ -125,10 +125,9 @@
         height:40px;
     }
     .f7-add-list input{
-        width:80%;
+        width:79%;
         float:left;
         border:none;
-        /*background-color:#5ac8fa;*/
         height:38px;
     }
 </style>

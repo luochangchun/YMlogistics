@@ -47,7 +47,7 @@
         },
 		methods: {
 			nexttwo(){
-					var data = this.carname;
+//					var data = this.carname;
 //					if(!data.carname.length){
 //						myApp.alert('车牌号不能为空！');
 //						return;
@@ -64,8 +64,21 @@
                 }
 				var datas = Dom7.extend({}, this.allData, data);
 				console.log(datas);
-				this.$router.load({url: '/carInformation/', query: {allData: datas}});
+				this.$router.load({url: '/photograph/', query: {allData: datas}});
             },
+
+			registerData(){
+				this.axios.post(this.ajax_head+'/YM/api/recogn/upd_phone', {
+
+				})
+					.then(function (response) {
+						console.log("注册成功!");
+					})
+					.catch(function (error) {
+						console.log("注册失败，请重新输入!");
+					});
+			},
+
 			getFont(item){
 				this.carname = item;
 				if(item.length <= 0){

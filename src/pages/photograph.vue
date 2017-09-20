@@ -5,7 +5,7 @@
             <p class="f7-carInformation-p">证件图片均经过严格保密处理,请您放心提交。</p>
             <div class="f7-photograph-picture">
                 <a class="f7-photograph-picture-one ac-5" @click="img1">
-                    <span v-show="!jszShow"><img src="" alt=""></span>
+                    <span v-show="!jszShow"><img src="url" alt=""></span>
                     <span v-show="jszShow">
                         <p>＋</p>
                         <span>驾驶证</span>
@@ -14,10 +14,10 @@
                 <input type="file" id="inputfile" style="opacity:0;filter:alpha(opacity=0)" accept="image/jpeg,image/jpg,image/png,image/webp" @change="imgDone($event)">
 
                 <a class="f7-photograph-picture-one ac-5">
-                    <<span v-show="!jszShow"><img src="" alt=""></span>
+                    <span v-show="!jszShow"><img src="" alt=""></span>
                     <span v-show="jszShow">
                         <p>＋</p>
-                        <span>驾驶证</span>
+                        <span>行驶证</span>
                     </span>
                 </a>
 
@@ -25,7 +25,7 @@
                     <span v-show="!jszShow"><img src="" alt=""></span>
                     <span v-show="jszShow">
                         <p>＋</p>
-                        <span>驾驶证</span>
+                        <span>本人头像</span>
                     </span>
                 </a>
             </div>
@@ -41,10 +41,12 @@
 	export default{
 		data(){
 			return{
-				jszShow:true
+				jszShow:true,
+//                url:''
 			};
 		},
 		mounted() {
+			this.allData = this.$route.options.query.allData;
 		},
 
 		methods: {
